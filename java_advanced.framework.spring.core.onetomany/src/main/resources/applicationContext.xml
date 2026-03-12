@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="project1"
+		class="com.capgemini.java_development.java_advanced.framework.spring.core.entity.Project">
+		<constructor-arg value="1" />
+		<constructor-arg value="ChatBot" />
+		<constructor-arg value="AI based" />
+	</bean>
+
+	<bean id="project2"
+		class="com.capgemini.java_development.java_advanced.framework.spring.core.entity.Project">
+		<constructor-arg value="2" />
+		<constructor-arg value="E-Commerce" />
+		<constructor-arg value="Web Application" />
+	</bean>
+
+	<bean id="project3"
+		class="com.capgemini.java_development.java_advanced.framework.spring.core.entity.Project">
+		<constructor-arg value="3" />
+		<constructor-arg value="Banking" />
+		<constructor-arg value="Spring Boot" />
+	</bean>
+
+	<bean id="student"
+		class="com.capgemini.java_development.java_advanced.framework.spring.core.entity.Student">
+
+		<property name="id" value="1" />
+		<property name="name" value="Raja" />
+		<property name="mailId" value="raja@gmail.com" />
+		<property name="contactNumber" value="8558562253" />
+
+		<property name="projects">
+			<array>
+				<ref bean="project1" />
+				<ref bean="project2" />
+				<ref bean="project3" />
+			</array>
+		</property>
+
+	</bean>
+
+</beans>
